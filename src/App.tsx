@@ -1,16 +1,14 @@
 import React from "react";
-import { Header } from "./components/UI/Header/Header";
 import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { MainPage } from "./pages/MainPage/MainPage";
+import { Container } from "./components/Container/Container";
 
-const App: React.FC = () => {
+const App = () => {
   return (
     <div className="App">
-      <Header />
-      <div className="container">
-        {/* <LoginPage /> */}
-        <MainPage />
-      </div>
+      <Container>
+        <LoginPage />
+      </Container>
     </div>
   );
 };

@@ -1,36 +1,21 @@
 import React from "react";
-import "./LoginPage.scss";
+import { AppButton } from "../../components/UI/AppButton/AppButton";
+import { AppInput } from "../../components/UI/AppInput/AppInput";
+import { RegistrationInfo } from "../../components/RegistrationInfo/RegistrationInfo";
+import { Heading } from "../../typography/Heading";
+import { LoginPageWrapper } from "./LoginPageWrapper";
 
 export const LoginPage = () => {
   return (
-    <div className="LoginPage">
-      <h1>Авторизация</h1>
+    <LoginPageWrapper>
+      <Heading type="h1" headingText="Авторизация" />
       <form action="#">
-        <input type="tel" placeholder="Номер телефона" />
-        <input type="password" placeholder="Пароль" />
-        <button>Войти</button>
+        <AppInput type="tel" placeholder="Номер телефона" />
+        <AppInput type="password" placeholder="Пароль" />
+        <AppButton type="button" buttonLabel="Войти" isPrimary />
       </form>
       <a href="#">Забыли пароль?</a>
-      <div className="registration">
-        <span>
-          У вас нет аккаунта? <a href="#">Зарегистрироваться</a>
-        </span>
-        <p>Войти с помощью</p>
-        <div className="icons-wrapper">
-          <a className="reg__link google-link" href="#">
-            <img src="./img/icons/google.svg" alt="Google" />
-          </a>
-          <a className="reg__link google-plus-link" href="#">
-            <img src="./img/icons/google-plus.svg" alt="Google Plus" />
-          </a>
-          <a className="reg__link yandex-link" href="#">
-            <img src="./img/icons/yandex.svg" alt="Yandex" />
-          </a>
-          <a className="reg__link mail-ru-link" href="#">
-            <img src="./img/icons/mail-ru.svg" alt="Mail.ru" />
-          </a>
-        </div>
-      </div>
-    </div>
+      <RegistrationInfo />
+    </LoginPageWrapper>
   );
 };
